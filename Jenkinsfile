@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh 'npm i -g yarn'
-        sh 'yarn install'
+        sh '''export PATH=/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/Node8/bin:$PATH
+yarn install'''
       }
     }
     stage('Lint') {
